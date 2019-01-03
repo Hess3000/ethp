@@ -1,4 +1,4 @@
-import web3 from './ethweb3';
+
 import React, { Component } from 'react';
 import { Image, Segment, Statistic, Card, Button, Container, Header, Grid, Table, Icon, Input } from 'semantic-ui-react';
 
