@@ -79,7 +79,6 @@ class EthPrice extends Component {
 				<Grid.Row centered>
 					<Grid.Column mobile={16}>
 						<Table celled unstackable>
-
 					    <Table.Body>
 					    	<Table.Row >
 					        <Table.Cell>
@@ -131,20 +130,15 @@ class EthPrice extends Component {
 
 					    </Table.Body>
 					  </Table>
-
-				    
-
 					</Grid.Column>
 				</Grid.Row>
 
 				<Grid.Row centered>
 					<Grid.Column>
-					
-
 						<Segment.Group>
-						    <Segment>The price of sending data is determind by the amount of data sent, the gas cost, and the current value of Ethereum. The table above is based on the current standard gas price of the latest blocks mined on the Ethereum blockchain. You can adjust the gas price here</Segment>
-						    <Segment>
-						    	<Input onChange={this.onChange} label={{ basic: true, content: 'Gwei' }} label='Set gas price' placeholder={this.state.avGasPrice} ref={this.state.avGasPrice} /></Segment>
+						   <Segment>The price of sending data is determind by the amount of data sent, the gas cost, and the current value of Ethereum. The table above is based on the current standard gas price of the latest blocks mined on the Ethereum blockchain. You can adjust the gas price here</Segment>
+					    <Segment>
+					    	<Input onChange={this.onChange} label={{ basic: true, content: 'Gwei' }} label='Set gas price' placeholder={this.state.avGasPrice} ref={this.state.avGasPrice} /></Segment>
 						    <Segment>{this.state.avGasPrice} Gwei = Current standard gas cost (less than 5 mins to confirm)</Segment>
 						    <Segment>${this.state.ethToDollar} = Current price of ethereum</Segment>
 						 </Segment.Group>
@@ -153,39 +147,38 @@ class EthPrice extends Component {
 
 			</Grid>
 			<Grid stackable centered columns={3}>
-	      	<Grid.Column>
-	    
-							<Segment circular style={square}>
-					      <Header as='h3'>
-					        {this.state.safeLoGas} Gwei
-					        <Header.Subheader>
-					        	Safe low - Less than 30 mins to confirm
-					        </Header.Subheader>
-					      </Header>
-					    </Segment>
-	      		</Grid.Column>
+	      <Grid.Column>
+	    		<Segment circular style={square}>
+			      <Header as='h3'>
+			        {this.state.safeLoGas} Gwei
+			        <Header.Subheader>
+			        	Safe low - Less than 30 mins to confirm
+			        </Header.Subheader>
+			      </Header>
+			    </Segment>
+    		</Grid.Column>
 
-	      		<Grid.Column>
-			        <Segment circular style={square}>
-					      <Header as='h3'>
-					        	{this.state.fastGas} Gwei
-					        <Header.Subheader>
-										Fast - less than 1 min to confirm
-					        </Header.Subheader> 
-					      </Header>
-					    </Segment>
-			      </Grid.Column>
+    		<Grid.Column>
+	        <Segment circular style={square}>
+			      <Header as='h3'>
+			        	{this.state.fastGas} Gwei
+			        <Header.Subheader>
+								Fast - less than 1 min to confirm
+			        </Header.Subheader> 
+			      </Header>
+			    </Segment>
+	      </Grid.Column>
 
-			      <Grid.Column>
-			        <Segment circular style={square}>
-					      <Header as='h3'>
-					        	{this.state.fastestGas} Gwei
-					        <Header.Subheader>
-										Fastest - less than 2 blocks
-					        </Header.Subheader> 
-					      </Header>
-					    </Segment>
-			      </Grid.Column>
+	      <Grid.Column>
+	        <Segment circular style={square}>
+			      <Header as='h3'>
+			        	{this.state.fastestGas} Gwei
+			        <Header.Subheader>
+								Fastest - less than 2 blocks
+			        </Header.Subheader> 
+			      </Header>
+			    </Segment>
+	      </Grid.Column>
 			  </Grid>
 			</div>
 		)
