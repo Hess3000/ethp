@@ -74,7 +74,7 @@ class EthPrice extends Component {
 
 	render () {
 		return (
-			<div>
+			<div style={style.last}>
 			<Grid style={style.h1}>
 				<Grid.Row centered>
 					<Grid.Column mobile={16}>
@@ -136,7 +136,7 @@ class EthPrice extends Component {
 				<Grid.Row centered>
 					<Grid.Column>
 						<Segment.Group>
-						   <Segment>The price of sending data is determind by the amount of data sent, the gas cost, and the current value of Ethereum. The table above is based on the current standard gas price of the latest blocks mined on the Ethereum blockchain. You can adjust the gas price here</Segment>
+						   <Segment>The price of sending data is determined by the amount of data sent, the gas cost, and the current value of Ethereum. The table above is based on the current standard gas price of the latest blocks mined on the Ethereum blockchain. You can adjust the gas price below.</Segment>
 					    <Segment>
 					    	<Input onChange={this.onChange} label={{ basic: true, content: 'Gwei' }} label='Set gas price' placeholder={this.state.avGasPrice} ref={this.state.avGasPrice} /></Segment>
 						    <Segment>{this.state.avGasPrice} Gwei = Current standard gas cost (less than 5 mins to confirm)</Segment>
@@ -147,7 +147,9 @@ class EthPrice extends Component {
 
 			</Grid>
 			<Grid stackable centered columns={3}>
-	      <Grid.Column>
+			<Grid.Row>
+			<Segment>
+	      
 	    		<Segment circular style={square}>
 			      <Header as='h3'>
 			        {this.state.safeLoGas} Gwei
@@ -156,9 +158,9 @@ class EthPrice extends Component {
 			        </Header.Subheader>
 			      </Header>
 			    </Segment>
-    		</Grid.Column>
+    		
 
-    		<Grid.Column>
+    		
 	        <Segment circular style={square}>
 			      <Header as='h3'>
 			        	{this.state.fastGas} Gwei
@@ -167,9 +169,9 @@ class EthPrice extends Component {
 			        </Header.Subheader> 
 			      </Header>
 			    </Segment>
-	      </Grid.Column>
+	      
 
-	      <Grid.Column>
+	      
 	        <Segment circular style={square}>
 			      <Header as='h3'>
 			        	{this.state.fastestGas} Gwei
@@ -178,7 +180,9 @@ class EthPrice extends Component {
 			        </Header.Subheader> 
 			      </Header>
 			    </Segment>
-	      </Grid.Column>
+	     
+	      </Segment>
+	      </Grid.Row>
 			  </Grid>
 			</div>
 		)
