@@ -25,6 +25,7 @@ class EthPrice extends Component {
 		ethToPound: '',
 		ethToEuro: '',
 		ethToDollar: '',
+		avGasPriceConst: '',
 		avGasPrice: '',
 		safeLoGas: '',
 		fastGas: '',
@@ -58,6 +59,7 @@ class EthPrice extends Component {
 			const { usd } = json2.ethereum;
 			
 			this.setState( {ethToDollar: usd } );
+			this.setState( {avGasPriceConst: standard } );
 			this.setState( {avGasPrice: standard, safeLoGas: safeLow, fastGas: fast, fastestGas: fastest } );
 			console.log( this.state.ethToDollar );
 
@@ -139,7 +141,7 @@ class EthPrice extends Component {
 						   <Segment>The price of sending data is determined by the amount of data sent, the gas cost, and the current value of Ethereum. The table above is based on the current standard gas price of the latest blocks mined on the Ethereum blockchain. You can adjust the gas price below.</Segment>
 					    <Segment>
 					    	<Input onChange={this.onChange} label={{ basic: true, content: 'Gwei' }} label='Set gas price' placeholder={this.state.avGasPrice} ref={this.state.avGasPrice} /></Segment>
-						    <Segment>{this.state.avGasPrice} Gwei = Current standard gas cost (less than 5 mins to confirm)</Segment>
+						    <Segment>{this.state.avGasPriceConst} Gwei = Current standard gas cost (less than 5 mins to confirm)</Segment>
 						    <Segment>${this.state.ethToDollar} = Current price of ethereum</Segment>
 						 </Segment.Group>
 					</Grid.Column>
