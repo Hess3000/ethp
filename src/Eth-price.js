@@ -96,7 +96,7 @@ class EthPrice extends Component {
 					        </Table.Cell>
 					        <Table.Cell>{(this.state.avGasPrice * this.state.bGR) / 1000000000 }</Table.Cell>
 					        <Table.Cell>
-					        	{this.state.ethToDollar * (this.state.avGasPrice * this.state.bGR) / 1000000000 }
+					        	${this.state.ethToDollar * (this.state.avGasPrice * this.state.bGR) / 1000000000 }
 					        </Table.Cell> 
 					      </Table.Row>
 					      
@@ -106,7 +106,7 @@ class EthPrice extends Component {
 					        </Table.Cell>
 					        <Table.Cell>{(this.state.avGasPrice * this.state.kbGR) / 1000000000 }</Table.Cell>
 					        <Table.Cell>
-					        	{this.state.ethToDollar * (this.state.avGasPrice * this.state.kbGR) / 1000000000 }
+					        	${this.state.ethToDollar * (this.state.avGasPrice * this.state.kbGR) / 1000000000 }
 					        </Table.Cell>
 					      </Table.Row>
 
@@ -116,7 +116,7 @@ class EthPrice extends Component {
 					        </Table.Cell>
 					        <Table.Cell>{(this.state.avGasPrice * this.state.mbGR) / 1000000000 }</Table.Cell>
 					        <Table.Cell>
-					        	{this.state.ethToDollar * (this.state.avGasPrice * this.state.mbGR) / 1000000000 }
+					        	${this.state.ethToDollar * (this.state.avGasPrice * this.state.mbGR) / 1000000000 }
 					        </Table.Cell>
 					      </Table.Row>
 
@@ -126,7 +126,7 @@ class EthPrice extends Component {
 					        </Table.Cell>
 					        <Table.Cell>{(this.state.avGasPrice * this.state.gbGR) / 1000000000 }</Table.Cell>
 					        <Table.Cell>
-					        	{this.state.ethToDollar * (this.state.avGasPrice * this.state.gbGR) / 1000000000 }
+					        	${this.state.ethToDollar * (this.state.avGasPrice * this.state.gbGR) / 1000000000 }
 					        </Table.Cell>
 					      </Table.Row>
 
