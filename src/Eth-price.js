@@ -18,7 +18,7 @@ const style = {
   },
 }
 
-const square = { width: 180, height: 180 };
+const square = { width: 120, height: 120 };
 
 class EthPrice extends Component {
 	state = {
@@ -148,10 +148,10 @@ class EthPrice extends Component {
 			</Grid>
 			<Grid stackable centered columns={3}>
 			<Grid.Row>
-			<Segment>
+			<Segment.Group horizontal>
 	      
-	    		<Segment circular style={square}>
-			      <Header as='h3'>
+	    		<Segment style={square}>
+			      <Header as='h4'>
 			        {this.state.safeLoGas} Gwei
 			        <Header.Subheader>
 			        	Safe low - Less than 30 mins to confirm
@@ -161,8 +161,8 @@ class EthPrice extends Component {
     		
 
     		
-	        <Segment circular style={square}>
-			      <Header as='h3'>
+	        <Segment style={square}>
+			      <Header as='h4'>
 			        	{this.state.fastGas} Gwei
 			        <Header.Subheader>
 								Fast - less than 1 min to confirm
@@ -172,8 +172,8 @@ class EthPrice extends Component {
 	      
 
 	      
-	        <Segment circular style={square}>
-			      <Header as='h3'>
+	        <Segment style={square}>
+			      <Header as='h4'>
 			        	{this.state.fastestGas} Gwei
 			        <Header.Subheader>
 								Fastest - less than 2 blocks
@@ -181,7 +181,9 @@ class EthPrice extends Component {
 			      </Header>
 			    </Segment>
 	     
-	      </Segment>
+	      </Segment.Group>
+	      	
+
 	      </Grid.Row>
 			  </Grid>
 			</div>
