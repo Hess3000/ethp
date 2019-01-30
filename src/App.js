@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EthPrice from './Eth-price';
+import Footer from './Footer';
 import {
   Button,
   Container,
@@ -25,7 +26,7 @@ const style = {
 class App extends Component {
   render() {
     return (
-      <Container>
+      <Container fluid> 
         <Header as='h1' textAlign='center' style={style.h1}>
           Cost of storing data on the Ethereum blockchain
         </Header>
@@ -35,6 +36,8 @@ class App extends Component {
 
         <EthPrice>
         </EthPrice>
+
+        <Footer></Footer>
       </Container>
     )
   }

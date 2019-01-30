@@ -76,7 +76,7 @@ class EthPrice extends Component {
 
 	render () {
 		return (
-			<div style={style.last}>
+			<Container>
 			<Grid style={style.h1}>
 				<Grid.Row centered>
 					<Grid.Column mobile={16}>
@@ -146,49 +146,41 @@ class EthPrice extends Component {
 						 </Segment.Group>
 					</Grid.Column>
 				</Grid.Row>
-
 			</Grid>
+
 			<Grid stackable centered columns={3}>
-			<Grid.Row>
-			<Segment.Group horizontal>
-	      
-	    		<Segment style={square}>
-			      <Header as='h4'>
-			        {this.state.safeLoGas} Gwei
-			        <Header.Subheader>
-			        	Safe low - Less than 30 mins to confirm
-			        </Header.Subheader>
-			      </Header>
-			    </Segment>
-    		
+				<Grid.Row>
+					<Segment.Group horizontal>
+			    		<Segment style={square}>
+					      <Header as='h4'>
+					        {this.state.safeLoGas} Gwei
+					        <Header.Subheader>
+					        	Safe low - Less than 30 mins to confirm
+					        </Header.Subheader>
+					      </Header>
+					    </Segment>
 
-    		
-	        <Segment style={square}>
-			      <Header as='h4'>
-			        	{this.state.fastGas} Gwei
-			        <Header.Subheader>
-								Fast - less than 1 min to confirm
-			        </Header.Subheader> 
-			      </Header>
-			    </Segment>
-	      
+			        <Segment style={square}>
+					      <Header as='h4'>
+					        	{this.state.fastGas} Gwei
+					        <Header.Subheader>
+										Fast - less than 1 min to confirm
+					        </Header.Subheader> 
+					      </Header>
+					    </Segment>
 
-	      
-	        <Segment style={square}>
-			      <Header as='h4'>
-			        	{this.state.fastestGas} Gwei
-			        <Header.Subheader>
-								Fastest - less than 2 blocks
-			        </Header.Subheader> 
-			      </Header>
-			    </Segment>
-	     
-	      </Segment.Group>
-	      	
-
-	      </Grid.Row>
+			        <Segment style={square}>
+					      <Header as='h4'>
+					        	{this.state.fastestGas} Gwei
+					        <Header.Subheader>
+										Fastest - less than 2 blocks
+					        </Header.Subheader> 
+					      </Header>
+					    </Segment>
+			      </Segment.Group>
+		      </Grid.Row>
 			  </Grid>
-			</div>
+			</Container>
 		)
 	}
 }
