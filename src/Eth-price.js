@@ -81,6 +81,12 @@ class EthPrice extends Component {
 				<Grid.Row centered>
 					<Grid.Column mobile={16}>
 						<Table celled unstackable>
+
+							<Table.Header>
+					      <Table.Row>
+					        <Table.HeaderCell colSpan='3'>Current cost of storing data based on average gas price</Table.HeaderCell>
+					      </Table.Row>
+					    </Table.Header>
 					    <Table.Body>
 					    	<Table.Row >
 					        <Table.Cell>
